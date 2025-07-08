@@ -147,10 +147,10 @@ class LandApprovalHandoverLegalController extends Controller
                 if (!file_exists($cacheFilePath)) {
                     // Send email
                     Mail::to($email)->send(new LandApprovalHandoverLegalMail($dataArray));
-        
+
                     // Mark email as sent
                     file_put_contents($cacheFilePath, 'sent');
-        
+
                     // Log the success
                     Log::channel('sendmailapproval')->info('Email doc_no ' . $doc_no . ' Entity ' . $entity_cd . ' berhasil dikirim ke: ' . $email);
                     return 'Email berhasil dikirim';
@@ -212,6 +212,13 @@ class LandApprovalHandoverLegalController extends Controller
             ->get();
 
             if(count($query3)==0){
+
+                $query_get = DB::connection('SSI')
+                ->table('mgr.cf_entity')
+                ->select('entity_name')
+                ->where('entity_cd', $entity_cd)
+                ->first();
+
                 $msg = 'There is no Request to Land Hand Over Legal No. '.$doc_no ;
                 $notif = 'Restricted !';
                 $st  = 'OK';
@@ -238,11 +245,18 @@ class LandApprovalHandoverLegalController extends Controller
                     $bgcolor = '#e85347';
                     $valuebt  = 'Cancel';
                 }
+
+                $query_get = DB::connection('SSI')
+                ->table('mgr.cf_entity')
+                ->select('entity_name')
+                ->where('entity_cd', $entity_cd)
+                ->first();
+
                 $data = array(
-                    'entity_cd'     => $entity_cd, 
-                    'doc_no'        => $doc_no, 
+                    'entity_cd'     => $entity_cd,
+                    'doc_no'        => $doc_no,
                     'status'        => $status,
-                    'level_no'      => $level_no, 
+                    'level_no'      => $level_no,
                     'name'          => $name,
                     'bgcolor'       => $bgcolor,
                     'valuebt'       => $valuebt,
