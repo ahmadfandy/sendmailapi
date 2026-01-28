@@ -91,7 +91,7 @@
                         </v:roundrect>
                         <![endif]-->
                         <!--[if !mso]-->
-                        <a href="{{ url('api') }}/{{ $data['link'] }}/A/{{ $data['entity_cd'] }}/{{ $data['doc_no'] }}/{{ $data['level_no'] }}" target="_blank" style="background-color:#1ee0ac;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:400;line-height:44px;text-align:center;text-decoration:none;padding: 0px 40px;margin: 10px">Approve</a>
+                        <a href="{{ url('api') }}/{{ $data['link'] }}/A/{{ $data['entity_cd'] }}/{{ $data['doc_no'] }}/{{ $data['level_no'] }}/{{ $data['approve_seq'] }}" target="_blank" style="background-color:#1ee0ac;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:400;line-height:44px;text-align:center;text-decoration:none;padding: 0px 40px;margin: 10px">Approve</a>
                         <!--<![endif]-->
 
                         <!--[if mso]>
@@ -101,7 +101,7 @@
                         </v:roundrect>
                         <![endif]-->
                         <!--[if !mso]-->
-                        <a href="{{ url('api') }}/{{ $data['link'] }}/R/{{ $data['entity_cd'] }}/{{ $data['doc_no'] }}/{{ $data['level_no'] }}" target="_blank" style="background-color:#f4bd0e;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:400;line-height:44px;text-align:center;text-decoration:none;padding: 0px 40px;margin: 10px">Request Info</a>
+                        <a href="{{ url('api') }}/{{ $data['link'] }}/R/{{ $data['entity_cd'] }}/{{ $data['doc_no'] }}/{{ $data['level_no'] }}/{{ $data['approve_seq'] }}" target="_blank" style="background-color:#f4bd0e;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:400;line-height:44px;text-align:center;text-decoration:none;padding: 0px 40px;margin: 10px">Request Info</a>
                         <!--<![endif]-->
 
                         <!--[if mso]>
@@ -111,7 +111,7 @@
                         </v:roundrect>
                         <![endif]-->
                         <!--[if !mso]-->
-                        <a href="{{ url('api') }}/{{ $data['link'] }}/C/{{ $data['entity_cd'] }}/{{ $data['doc_no'] }}/{{ $data['level_no'] }}" target="_blank" style="background-color:#e85347;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:400;line-height:44px;text-align:center;text-decoration:none;padding: 0px 40px;margin: 10px">Reject</a>
+                        <a href="{{ url('api') }}/{{ $data['link'] }}/C/{{ $data['entity_cd'] }}/{{ $data['doc_no'] }}/{{ $data['level_no'] }}/{{ $data['approve_seq'] }}" target="_blank" style="background-color:#e85347;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:400;line-height:44px;text-align:center;text-decoration:none;padding: 0px 40px;margin: 10px">Reject</a>
                         <!--<![endif]-->
                         <br>
                         @php

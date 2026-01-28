@@ -296,7 +296,7 @@ Route::POST('/landcancelnop/update', [LandCancelNop::class, 'update']);
 use App\Http\Controllers\LandApprovalHandoverShgbController as LandApprovalHandoverShgb;
 Route::POST('/landapprovalhandovershgb', [LandApprovalHandoverShgb::class, 'Mail']);
 Route::POST('/landapprovalhandovershgb/update', [LandApprovalHandoverShgb::class, 'update']);
-Route::GET('/landapprovalhandovershgb/{status}/{entity_cd}/{doc_no}/{level_no}', [LandApprovalHandoverShgb::class, 'changestatus']);
+Route::GET('/landapprovalhandovershgb/{status}/{entity_cd}/{doc_no}/{level_no}/{approve_seq}', [LandApprovalHandoverShgb::class, 'changestatus']);
 
 use App\Http\Controllers\LandApprovalHandoverLegalController as LandApprovalHandoverLegal;
 Route::POST('/landapprovalhandoverlegal', [LandApprovalHandoverLegal::class, 'Mail']);

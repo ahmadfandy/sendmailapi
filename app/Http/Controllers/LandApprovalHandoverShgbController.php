@@ -69,6 +69,7 @@ class LandApprovalHandoverShgbController extends Controller
         $dataArray = array(
             'user_id'           => $request->user_id,
             'level_no'          => $request->level_no,
+            'approve_seq'       => $request->approve_seq,
             'entity_cd'         => $request->entity_cd,
             'doc_no'            => $request->doc_no,
             'email_addr'        => $request->email_addr,
@@ -142,7 +143,7 @@ class LandApprovalHandoverShgbController extends Controller
         }
     }
 
-    public function changestatus($status='', $entity_cd='', $doc_no='', $level_no='')
+    public function changestatus($status='', $entity_cd='', $doc_no='', $level_no='', $approve_seq='')
     {
         $query_get = DB::connection('SSI')
         ->table('mgr.cf_entity')
@@ -155,6 +156,7 @@ class LandApprovalHandoverShgbController extends Controller
             'status'        => array("A",'R', 'C'),
             'entity_cd'     => $entity_cd,
             'level_no'      => $level_no,
+            'approve_seq'   => $approve_seq,
             'type'          => 'H',
             'module'        => 'LM',
         );
@@ -182,6 +184,7 @@ class LandApprovalHandoverShgbController extends Controller
                 'status'        => 'P',
                 'entity_cd'     => $entity_cd,
                 'level_no'      => $level_no,
+                'approve_seq'   => $approve_seq,
                 'type'          => 'H',
                 'module'        => 'LM',
             );
