@@ -33,7 +33,7 @@
                                         <input type="text" id="level_no" name="level_no" value="<?php echo $level_no?>" hidden>
                                         <div class="form-group">
                                             <textarea class="form-control" id="remarks" name="remarks" rows="3"></textarea>
-                                        </div>                                          
+                                        </div>
                                         <input type="submit" class="btn" style="background-color:<?php echo $bgcolor?>;color:#ffffff;display:inline-block;font-size:13px;font-weight:600;line-height:44px;text-align:center;text-decoration:none;text-transform: uppercase; padding: 0px 40px;margin: 10px" value=<?php echo $valuebt?>>
                                     </form>
                                 </td>

@@ -25,3 +25,7 @@
     Order allow,deny
     Deny from all
 </Files>
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
