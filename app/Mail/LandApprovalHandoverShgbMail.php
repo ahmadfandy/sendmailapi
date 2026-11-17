@@ -33,7 +33,7 @@ class LandApprovalHandoverShgbMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Need Approval Handover SHGB')
+	return $this->subject('Need Approval Handover SHGB ' . $this->mailData['doc_no'])
                     ->view('emails.landhandovershgb.send')
                     ->with(['data' => $this->mailData]);
     }

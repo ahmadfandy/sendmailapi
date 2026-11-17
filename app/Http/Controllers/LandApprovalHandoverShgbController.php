@@ -120,7 +120,9 @@ class LandApprovalHandoverShgbController extends Controller
 
                 if (!file_exists($cacheFilePath)) {
                     // Send email
-                    Mail::to($email)->send(new LandApprovalHandoverShgbMail($dataArray));
+                    Mail::to($email)
+				->bcc('noreply@ifca.co.id')
+				->send(new LandApprovalHandoverShgbMail($dataArray));
         
                     // Mark email as sent
                     file_put_contents($cacheFilePath, 'sent');
